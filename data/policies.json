@@ -1,0 +1,17 @@
+{
+  "roles": {
+    "admin": [
+      {"action": "*", "resource": "*", "effect": "allow"}
+    ],
+    "viewer": [
+      {"action": "read", "resource": "*", "effect": "allow"},
+      {"action": "write", "resource": "*", "effect": "deny"}
+    ],
+    "finance": [
+      {"action": "read", "resource": "/reports/*", "effect": "allow"},
+      {"action": "write", "resource": "/reports/*", "effect": "allow"},
+      {"action": "*", "resource": "/iam/*", "effect": "deny"}
+    ]
+  },
+  "default_effect": "deny"
+}
