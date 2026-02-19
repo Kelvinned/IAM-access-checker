@@ -34,3 +34,11 @@ Policies and users are stored as JSON because:
 - `src/` - Python code (the “engine”)
 - `data/` - JSON configuration (users + policies)
 - `logs/` - decision logs (audit trail)
+
+## How to run (codespaces)
+Open the terminal and run :
+
+```bash
+python3 src/access_checker.py --user annya --action read --resource /reports/q1
+python3 src/access_checker.py --user annya --action write --resource /reports/q1
+python3 src/access_checker.py --user kelvin --action read --resource /iam/users
